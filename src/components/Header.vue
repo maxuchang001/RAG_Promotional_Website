@@ -12,9 +12,9 @@
         <el-menu-item index="4-3">智慧医疗</el-menu-item>
         <el-menu-item index="4-4">金融问答</el-menu-item>
       </el-sub-menu>
-      <el-menu-item index="5">定价</el-menu-item>
-      <el-menu-item index="6">博客</el-menu-item>
-      <el-menu-item index="7">文档</el-menu-item>
+      <el-menu-item index="5" @click="handleMenuClick('/pricing')">定价</el-menu-item>
+      <el-menu-item index="6" @click="handleMenuClick('/blog')">博客</el-menu-item>
+      <el-menu-item index="7" @click="handleMenuClick('/docs')">文档</el-menu-item>
     </el-menu>
     <div class="actions">
       <el-input placeholder="搜索..." size="small" />
