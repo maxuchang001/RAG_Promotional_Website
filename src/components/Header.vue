@@ -4,13 +4,13 @@
     <el-menu mode="horizontal" class="nav" :default-active="'1'">
       <el-menu-item index="1" @click="handleMenuClick('/')">主页</el-menu-item>
       <el-menu-item index="2" @click="handleMenuClick('/chipdesign')">芯片文档</el-menu-item>
-      <el-menu-item index="3">准确性</el-menu-item>
-      <el-sub-menu index="4">
+      <el-menu-item index="3" @click="handleMenuClick('/accuracy')">准确性</el-menu-item>
+      <el-sub-menu index="4" >
         <template #title>用例</template>
-        <el-menu-item index="4-1">芯片设计</el-menu-item>
-        <el-menu-item index="4-2">自动驾驶</el-menu-item>
-        <el-menu-item index="4-3">智慧医疗</el-menu-item>
-        <el-menu-item index="4-4">金融问答</el-menu-item>
+        <el-menu-item index="4-1" @click="handleMenuClick('/chipdesigncase')">芯片设计</el-menu-item>
+        <el-menu-item index="4-2" @click="handleMenuClick('/autonomousvehicles')">自动驾驶</el-menu-item>
+        <el-menu-item index="4-3" @click="handleMenuClick('/medicalrobotics')">智慧医疗</el-menu-item>
+        <el-menu-item index="4-4" @click="handleMenuClick('/finregcompliance')">金融问答</el-menu-item>
       </el-sub-menu>
       <el-menu-item index="5" @click="handleMenuClick('/pricing')">定价</el-menu-item>
       <el-menu-item index="6" @click="handleMenuClick('/blog')">博客</el-menu-item>
