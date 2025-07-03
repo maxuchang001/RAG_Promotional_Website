@@ -2,21 +2,21 @@
   <el-footer>
     <el-row class="footer" :gutter="40">
       <el-col :span="6">
-        <h4>关于我们</h4>
-        <ul><li>公司介绍</li><li>发展历程</li><li>团队介绍</li><li>新闻动态</li></ul>
+        <h4>About Us</h4>
+        <ul><li>Company Profile</li><li>Milestones</li><li>Team Introduction</li><li>News & Events</li></ul>
       </el-col>
       <el-col :span="6">
-        <h4>文档</h4>
-        <ul><li>快速指南</li><li>Docker 命令</li><li>VS Code 插件</li><li>API 文档</li></ul>
+        <h4>Document</h4>
+        <ul><li>Quick Guide</li><li>Docker Commands</li><li>VS Code plugin</li><li>API Document</li></ul>
       </el-col>
       <el-col :span="6">
-        <h4>支持</h4>
-        <ul><li>帮助中心</li><li>技术支持</li><li>常见问题</li><li>联系我们</li></ul>
+        <h4>Support</h4>
+        <ul><li>Help Center</li><li>Technical Support</li><li>FAQs</li><li>Contact Us</li></ul>
       </el-col>
       <el-col :span="6">
-        <h4>联系方式</h4>
-        <p>邮箱：contact@example.com</p>
-        <p>电话：400-123-4567</p>
+        <h4>Contact Details</h4>
+        <p>Email：contact@example.com</p>
+        <p>Phone Call：400-123-4567</p>
       </el-col>
     </el-row>
   </el-footer>
