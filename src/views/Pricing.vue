@@ -1,82 +1,82 @@
 <template>
   <div class="pricing-page">
-    <!-- 顶部标题 -->
-    <h1>定价</h1>
-    <p class="subtitle">从演示到生产，随业务扩展的弹性计费</p>
+    <!-- Top Title -->
+    <!-- <h1>Pricing</h1> -->
+    <p class="subtitle">Elastic pricing from demo to production, scaling with your business</p>
 
-    <!-- 平台计费 -->
-    <h2 class="section-title">平台计费</h2>
+    <!-- Platform Pricing -->
+    <h1 class="section-title">PlatformAI Pricing</h1>
     <div class="pricing-table">
-      <!-- 按需版 -->
+      <!-- On-demand Plan -->
       <div class="plan">
-        <h3>按需版</h3>
-        <p class="price">$0<span> / 月 + 使用量计费</span></p>
+        <h3>On-Demand</h3>
+        <p class="price">$0<span> / month + usage-based billing</span></p>
         <ul>
-          <li>$25 免费额度</li>
-          <li>≈ $0.05 / 查询（按 Token 计费）</li>
-          <li>$48.50 / 1,000 页文档导入</li>
-          <li>无限用户 / 工作区 / Agents</li>
-          <li>SOC2 & HIPAA 合规</li>
+          <li>$25 free credit</li>
+          <li>≈ $0.05 / query (token-based billing)</li>
+          <li>$48.50 / 1,000 pages document import</li>
+          <li>Unlimited users / workspaces / agents</li>
+          <li>SOC2 & HIPAA compliant</li>
           <li>SAML / SSO</li>
         </ul>
-        <el-button type="primary" plain>立即开始</el-button>
+        <el-button type="primary" plain>Get Started</el-button>
       </div>
 
-      <!-- 预留吞吐版 -->
+      <!-- Reserved Throughput Plan -->
       <div class="plan featured">
-        <h3>预留吞吐版</h3>
-        <p class="price">定制<span>（按 Model Unit 月度承诺）</span></p>
+        <h3>Reserved Throughput</h3>
+        <p class="price">Custom<span> (monthly commitment by Model Unit)</span></p>
         <ul>
-          <li>固定吞吐量保证（TPS SLA）</li>
-          <li>包含按需版全部特性</li>
-          <li>RBAC、使用分析、Pipeline 可观测性</li>
-          <li>专属或客户 VPC 部署选项</li>
-          <li>专属客户经理</li>
+          <li>Guaranteed fixed throughput (TPS SLA)</li>
+          <li>All features of On-demand plan</li>
+          <li>RBAC, usage analytics, pipeline observability</li>
+          <li>Dedicated or customer VPC deployment options</li>
+          <li>Dedicated account manager</li>
         </ul>
-        <el-button type="primary">联系销售</el-button>
+        <el-button type="primary">Contact Sales</el-button>
       </div>
     </div>
 
-    <!-- 功能对比表 -->
-    <h2 class="section-title">功能对比</h2>
+    <!-- Feature Comparison Table -->
+    <h2 class="section-title">Feature Comparison</h2>
     <div class="table-wrapper">
       <table class="feature-table">
         <thead>
           <tr>
-            <th>平台管理</th>
-            <th>按需版</th>
-            <th>预留吞吐版</th>
+            <th>Platform Management</th>
+            <th>On-demand</th>
+            <th>Reserved Throughput</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>无限用户 / 管理员 / 工作区</td><td>✓</td><td>✓</td></tr>
-          <tr><td>Agents / Datastore 数量</td><td>✓</td><td>✓</td></tr>
-          <tr><td>User Roles & Admin 权限</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Unlimited users / admins / workspaces</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Agents / datastore quantity</td><td>✓</td><td>✓</td></tr>
+          <tr><td>User roles & admin permissions</td><td>✓</td><td>✓</td></tr>
           <tr><td>SOC2 Type II & HIPAA</td><td>✓</td><td>✓</td></tr>
           <tr><td>SAML / SSO</td><td>✓</td><td>✓</td></tr>
           <tr><td>RBAC</td><td>—</td><td>✓</td></tr>
-          <tr><td>Usage 分析</td><td>—</td><td>✓</td></tr>
-          <tr><td>Pipeline Observability</td><td>—</td><td>✓</td></tr>
+          <tr><td>Usage analytics</td><td>—</td><td>✓</td></tr>
+          <tr><td>Pipeline observability</td><td>—</td><td>✓</td></tr>
         </tbody>
       </table>
 
       <table class="feature-table">
         <thead>
           <tr>
-            <th>数据摄取</th>
-            <th>按需版</th>
-            <th>预留吞吐版</th>
+            <th>Data Ingestion</th>
+            <th>On-demand</th>
+            <th>Reserved Throughput</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>简单文本文档</td><td>✓</td><td>✓</td></tr>
-          <tr><td>复杂文档 / 图表 / 图片</td><td>✓</td><td>✓</td></tr>
-          <tr><td>非结构化数据</td><td>✓</td><td>✓</td></tr>
-          <tr><td>结构化数据</td><td>联系销售</td><td>联系销售</td></tr>
-          <tr><td>UI 导入</td><td>✓</td><td>✓</td></tr>
-          <tr><td>持续数据摄取</td><td>联系销售</td><td>联系销售</td></tr>
-          <tr><td>标准集成</td><td>✓</td><td>✓</td></tr>
-          <tr><td>自定义集成</td><td>联系销售</td><td>联系销售</td></tr>
+          <tr><td>Simple text documents</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Complex documents / charts / images</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Unstructured data</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Structured data</td><td>Contact Sales</td><td>Contact Sales</td></tr>
+          <tr><td>UI import</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Continuous data ingestion</td><td>Contact Sales</td><td>Contact Sales</td></tr>
+          <tr><td>Standard integrations</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Custom integrations</td><td>Contact Sales</td><td>Contact Sales</td></tr>
         </tbody>
       </table>
 
@@ -84,60 +84,60 @@
         <thead>
           <tr>
             <th>Deployment</th>
-            <th>按需版</th>
-            <th>预留吞吐版</th>
+            <th>On-demand</th>
+            <th>Reserved Throughput</th>
           </tr>
         </thead>
         <tbody>
           <tr><td>PlatformAI SaaS</td><td>✓</td><td>✓</td></tr>
-          <tr><td>Dedicated PlatformAI VPC</td><td>—</td><td>联系销售</td></tr>
-          <tr><td>Customer VPC</td><td>—</td><td>联系销售</td></tr>
+          <tr><td>Dedicated PlatformAI VPC</td><td>—</td><td>Contact Sales</td></tr>
+          <tr><td>Customer VPC</td><td>—</td><td>Contact Sales</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- 组件 API 计费 -->
-    <h2 class="section-title">组件 API 计费</h2>
+    <!-- Component API Pricing -->
+    <h2 class="section-title">Component API Pricing</h2>
     <div class="component-table">
       <div class="component-card">
         <h4>Parse</h4>
         <ul>
-          <li>Text Only：$3 / 1,000 页</li>
-          <li>Multimodal：$40 / 1,000 页</li>
+          <li>Text Only: $3 / 1,000 pages</li>
+          <li>Multimodal: $40 / 1,000 pages</li>
         </ul>
       </div>
       <div class="component-card">
         <h4>Rerank</h4>
         <ul>
-          <li>$0.12 / 1M Tokens (输入)</li>
+          <li>$0.12 / 1M tokens (input)</li>
         </ul>
       </div>
       <div class="component-card">
         <h4>Generate</h4>
         <ul>
-          <li>$3 / 1M Tokens (输入)</li>
-          <li>$15 / 1M Tokens (输出)</li>
+          <li>$3 / 1M tokens (input)</li>
+          <li>$15 / 1M tokens (output)</li>
         </ul>
       </div>
       <div class="component-card">
         <h4>LMUnit</h4>
         <ul>
-          <li>$3 / 1M Tokens (输入)</li>
+          <li>$3 / 1M tokens (input)</li>
         </ul>
       </div>
     </div>
 
     <!-- CTA -->
     <div class="cta">
-      <h3>让我们开始</h3>
-      <p>Platform AI 已被 HSBC、Qualcomm、Hudl 等行业领袖信赖，用于他们最复杂、知识密集的 AI 场景。</p>
-      <el-button type="success">联系我们</el-button>
+      <h3>Let's Get Started</h3>
+      <p>Platform AI is trusted by industry leaders such as HSBC, Qualcomm, and Hudl for their most complex, knowledge-intensive AI scenarios.</p>
+      <el-button type="success">Contact Us</el-button>
     </div>
 
-    <!-- 免责声明 -->
+    <!-- Disclaimer -->
     <div class="note">
       <el-alert
-        title="所有价格仅供参考，实际以合同为准。如需更详细说明或定制方案，欢迎联系我们。"
+        title="All prices are for reference only. Actual pricing is subject to contract. For more details or custom solutions, please contact us."
         type="info"
         show-icon
         :closable="false"
@@ -147,7 +147,7 @@
 </template>
 
 <script setup>
-// 目前仅静态展示；如需动态加载数据或国际化可在此补充逻辑
+// Static display only; add dynamic data or i18n logic here if needed
 </script>
 
 <style scoped>
@@ -167,7 +167,7 @@
   font-weight: 600;
   text-align: center;
 }
-/* 计划卡片 */
+/* Plan Cards */
 .pricing-table {
   display: flex;
   gap: 32px;
@@ -215,7 +215,7 @@
   margin-bottom: 8px;
   color: #555;
 }
-/* 功能对比表 */
+/* Feature Comparison Table */
 .table-wrapper {
   overflow-x: auto;
   margin-top: 24px;
@@ -241,7 +241,7 @@
 .feature-table tbody tr:nth-child(odd) {
   background: #fafafa;
 }
-/* 组件 API */
+/* Component API */
 .component-table {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
