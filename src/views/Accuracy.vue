@@ -1,84 +1,84 @@
 <template>
   <div class="accuracy-verification">
     <!-- 标题区 -->
-    <h2 class="title">准确性验证</h2>
-    <p class="sub-title">基于科学测试体系，覆盖功能、性能、效率全维度验证</p>
+    <h2 class="title">Accuracy verification</h2>
+    <p class="sub-title">Based on the scientific testing system, it covers the full-dimensional verification of function, performance and efficiency</p>
 
     <!-- 核心内容区 -->
     <div class="content">
       <!-- 左侧：测试维度 + 原理 -->
       <div class="test-dimensions">
-        <h3 class="dimension-title">测试维度与验证逻辑</h3>
+        <h3 class="dimension-title">Test dimensions and validation logic</h3>
 
         <!-- 文档理解准确性 -->
         <div class="dimension-item">
           <div class="item-header">
-            <h4>文档理解准确性</h4>
-            <span class="detail-icon" @click="toggleDetail(0)">▾</span>
+            <h4>Document comprehension accuracy</h4>
+            <span class="detail-icon">▾</span>
           </div>
-          <div class="item-detail" v-show="showDetails[0]">
-            <p>通过 <strong>三轮递进式测试</strong> 验证内容理解准确性：</p>
+          <div class="item-detail" v-show="true">
+            <p>Verify content comprehension accuracy with <strong>three rounds of progressive testing</strong>:</p>
             <ol>
-              <li>基础验证：覆盖1000+份标准格式文档（PDF/Word/Markdown）</li>
-              <li>复杂场景：包含专业术语（如医疗/法律领域）、模糊语义、跨章节关联测试</li>
-              <li>动态更新：每月引入行业新增典型文档（如金融新规、技术白皮书）</li>
+              <li>Basic validation: covering 1000+ documents in standard formats (PDF/Word/Markdown)</li>
+              <li>Complex scenarios: contain specialized terminology (e.g., medical/legal fields), fuzzy semantics, cross-chapter association testing</li>
+              <li>Dynamic updates: Introduce new typical documents in the industry (such as new financial regulations and technical white papers) every month.</li>
             </ol>
-            <p>验证标准：人工标注与系统输出 <strong>匹配度≥98.5%</strong> 视为通过</p>
+            <p>Verification criteria: <strong>98.5% of the matching degree</strong> between manual annotation and system output ≥ pass</p>
           </div>
-          <p class="item-summary">多轮测试覆盖标准/复杂场景，保障内容理解精准度</p>
+          <p class="item-summary">Multiple rounds of testing cover standard/complex scenarios to ensure the accuracy of content understanding</p>
         </div>
 
         <!-- 响应速度 -->
         <div class="dimension-item">
           <div class="item-header">
-            <h4>响应速度</h4>
-            <span class="detail-icon" @click="toggleDetail(1)">▾</span>
+            <h4>Responsiveness</h4>
+            <span class="detail-icon">▾</span>
           </div>
-          <div class="item-detail" v-show="showDetails[1]">
-            <p>采用 <strong>梯度压力测试</strong> 模拟真实场景：</p>
+          <div class="item-detail" v-show="true">
+            <p><strong>Gradient stress testing</strong> is used to simulate real-world scenarios:</p>
             <ul>
-              <li>单用户测试：1000+次请求平均响应时间统计</li>
-              <li>并发测试：模拟10/100/1000用户同时请求，监测系统吞吐量</li>
-              <li>极端场景：超大文档（100MB+）、高频次连续请求（每秒50+次）</li>
+              <li>Single-user test: 1000+ requests with average response time statistics</li>
+              <li>Concurrent test: Simulates 10/100/1000 simultaneous user requests to monitor system throughput</li>
+              <li>Extreme scenarios: large documents (100MB+) and high-frequency sequential requests (50+ requests per second)</li>
             </ul>
-            <p>验证标准：99%请求响应时间 <strong>≤500ms</strong>，峰值场景无服务中断</p>
+            <p>Verification criteria: 99% request response time <strong>≤ 500ms</strong>, no service interruption in peak scenarios</p>
           </div>
-          <p class="item-summary">全场景压力测试，确保不同负载下响应效率</p>
+          <p class="item-summary">All-scenario stress test to ensure response efficiency under different loads</p>
         </div>
 
         <!-- 资源消耗 -->
         <div class="dimension-item">
           <div class="item-header">
-            <h4>资源消耗</h4>
-            <span class="detail-icon" @click="toggleDetail(2)">▾</span>
+            <h4>Resource consumption</h4>
+            <span class="detail-icon">▾</span>
           </div>
-          <div class="item-detail" v-show="showDetails[2]">
-            <p>通过 <strong>硬件基线对比法</strong> 验证资源效率：</p>
+          <div class="item-detail" v-show="true">
+            <p>Verify resource efficiency with <strong>the Hardware Baseline Comparison Method</strong>:</p>
             <ol>
-              <li>同配置对比：在8核16G服务器上，对比同类系统CPU/内存占用</li>
-              <li>动态伸缩测试：模拟业务峰谷（请求量差10倍），监测资源弹性调度</li>
-              <li>长期稳定性：72小时持续运行，统计资源波动曲线</li>
+              <li>Comparison of the same configuration: On an 8-core 16G server, compare the CPU/memory usage of similar systems</li>
+              <li>Dynamic scaling test: Simulates business peaks and valleys (10 times the difference in request volume) to monitor the elastic scheduling of resources</li>
+              <li>Long-term stability: 72 hours of continuous operation, statistical resource fluctuation curve</li>
             </ol>
-            <p>验证标准：常规场景CPU占用 <strong>≤40%</strong>，内存占用 <strong>≤60%</strong></p>
+            <p>Verification criteria: <strong>≤ 40%</strong> CPU ≤ usage and <strong>60%</strong> memory usage in normal scenarios</p>
           </div>
-          <p class="item-summary">硬件级对比测试，保障资源利用高效性</p>
+          <p class="item-summary">Hardware-level comparative testing to ensure efficient resource utilization</p>
         </div>
       </div>
 
       <!-- 右侧：对比测试 + 数据可视化 -->
       <div class="comparative-test">
-        <h3 class="dimension-title">多维度对比测试</h3>
+        <h3 class="dimension-title">Multi-dimensional comparison test</h3>
 
         <!-- 可视化对比图表 -->
         <div class="comparison-chart">
-          <div class="chart-title">核心指标对比</div>
+          <div class="chart-title">Comparison of core indicators</div>
           <div class="chart-group">
             <div class="chart-item">
-              <div class="chart-label">准确率</div>
+              <div class="chart-label">Accuracy</div>
               <div class="chart-bar">
                 <div class="bar-fill" style="width: 98.7%"></div>
               </div>
-              <div class="chart-value">本系统：98.7%</div>
+              <div class="chart-value">System: 98.7%</div>
             </div>
             <div class="chart-item">
               <div class="chart-label">LangChain</div>
@@ -100,35 +100,35 @@
         <!-- 详细对比项 -->
         <div class="comparison-list">
           <div class="comparison-item">
-            <span>文档理解深度</span>
-            <span class="highlight">+12% 专业术语识别</span>
-            <p class="comparison-note">覆盖医疗/法律/金融等垂直领域</p>
+            <span>Depth of document comprehension</span>
+            <span class="highlight">+12% Terminology recognition</span>
+            <p class="comparison-note">Covering medical/legal/financial and other vertical fields</p>
           </div>
           <div class="comparison-item">
-            <span>平均响应速度</span>
-            <span class="highlight">+20% 处理效率</span>
-            <p class="comparison-note">100并发下优势显著</p>
+            <span>Average response speed</span>
+            <span class="highlight">+20% processing efficiency</span>
+            <p class="comparison-note">The advantage of 100 concurrency is significant</p>
           </div>
           <div class="comparison-item">
-            <span>资源占用</span>
-            <span class="highlight">-30% CPU 使用率</span>
-            <p class="comparison-note">同配置服务器支持更多并发</p>
+            <span>Resource usage</span>
+            <span class="highlight">-30% CPU usage</span>
+            <p class="comparison-note">The same configuration server supports more concurrency</p>
           </div>
           <div class="comparison-item">
-            <span>异常恢复能力</span>
-            <span class="highlight">+25% 故障自愈率</span>
-            <p class="comparison-note">网络波动/硬件异常场景验证</p>
+            <span>Exceptionally resilient capabilities</span>
+            <span class="highlight">+25% self-healing rate</span>
+            <p class="comparison-note">Verification of network fluctuations/hardware anomalies in scenarios</p>
           </div>
         </div>
 
         <!-- 标杆客户案例 -->
         <div class="customer-case">
-          <h4 class="case-title">某金融机构实测数据</h4>
-          <p class="case-desc">在10万份信贷合同处理中：</p>
+          <h4 class="case-title">Measured data from a financial institution</h4>
+          <p class="case-desc">In the processing of 100,000 credit contracts:</p>
           <ul>
-            <li>• 准确率：99.2%（人工复核仅修正78份）</li>
-            <li>• 处理耗时：相比传统系统缩短65%</li>
-            <li>• 服务器成本：减少2台物理机部署</li>
+            <li>Accuracy: 99.2% (only 78 corrections were made by manual review)</li>
+            <li>Processing time: 65% shorter than traditional systems</li>
+            <li>Server cost: Reduce the deployment of 2 physical machines</li>
           </ul>
         </div>
       </div>
@@ -136,32 +136,24 @@
 
     <!-- 底部：测试体系说明 -->
     <div class="test-system">
-      <h3 class="system-title">测试体系说明</h3>
+      <h3 class="system-title">Description of the test system</h3>
       <p class="system-desc">
-        本验证基于 <strong>ISO/IEC 25010</strong> 软件质量模型设计，测试数据集涵盖：
+        This verification is based on <strong>the ISO/IEC 25010</strong> software quality model design, and the test dataset covers:
         <br>
-        • 通用文档：5000+份日常办公文档（邮件/报告/合同）
+        • General documents: 5000+ daily office documents (emails/reports/contracts)
         <br>
-        • 专业文档：3000+份医疗病历、法律条文、金融财报
+        • Professional documents: 3000+ medical records, legal provisions, financial reports
         <br>
-        • 极限场景：100+份超大/加密/格式破损文档
+        • Extreme scenarios: 100+ oversized/encrypted/broken format documents
         <br>
-        所有测试通过 <strong>第三方中立机构</strong> 监督执行，保障结果客观可信。
+        All tests are supervised and carried out by <strong>a third-party neutral organization</strong> to ensure that the results are objective and credible.
       </p>
-      <a href="#" class="report-link" target="_blank">查看完整测试报告</a>
+      <a href="#" class="report-link" target="_blank">View the full test report</a>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
-// 控制维度详情展开
-const showDetails = ref([false, false, false]);
-
-const toggleDetail = (index) => {
-  showDetails.value[index] =!showDetails.value[index];
-};
 </script>
 
 <style scoped>
