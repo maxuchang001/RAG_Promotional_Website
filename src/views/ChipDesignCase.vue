@@ -1,63 +1,62 @@
 <template>
   <div class="case-detail-page">
     <!-- 导航栏 -->
-    <nav class="case-nav">
+    <!-- <nav class="case-nav">
       <div class="back-link" @click="$router.back()">← 返回场景列表</div>
       <div class="nav-title">技术应用场景</div>
-    </nav>
+    </nav> -->
 
     <!-- 页面标题 -->
     <div class="case-header">
-      <h1 class="case-title">AI 驱动芯片设计验证加速方案</h1>
-      <div class="case-meta">Chip design / 7nm/5nm 工艺支持</div>
+      <h1 class="case-title">AI-driven IC design verification acceleration solution</h1>
+      <div class="case-meta">Chip design / 7nm/5nm Process Support</div>
     </div>
 
     <!-- 核心内容 -->
     <div class="case-content">
       <!-- 方案概述 -->
       <section class="case-section">
-        <h2 class="section-title">方案概述</h2>
+        <h2 class="section-title">Overview of the scenario</h2>
         <p class="section-desc">
-          本方案通过 AI 算法自动识别芯片设计中的潜在问题，将传统验证周期缩短 40%，特别适用于 7nm 和 5nm 先进制程工艺。
-          系统可与 Cadence、Synopsys 主流 EDA 工具链无缝协同，实现设计流程的端到端智能化。
+          This solution uses AI algorithms to automatically identify potential problems in chip design, shortening the traditional verification cycle by 40%, especially for 7nm and 5nm advanced process technologies. The system works seamlessly with Cadence and Synopsys' leading EDA toolchains to deliver end-to-end intelligence in the design process.
         </p>
       </section>
 
       <!-- 核心优势 -->
       <section class="case-section">
-        <h2 class="section-title">核心优势</h2>
+        <h2 class="section-title">Core Benefits:</h2>
         <div class="advantages-list">
           <div class="advantage-item">
             <div class="advantage-icon">⏱️</div>
-            <div class="advantage-text">验证周期缩短 40%，降低时间成本</div>
+            <div class="advantage-text">Reduce time costs by reducing validation cycles by 40%.</div>
           </div>
           <div class="advantage-item">
             <div class="advantage-icon">🎯</div>
-            <div class="advantage-text">问题识别准确率达 98.7%，减少人工排查</div>
+            <div class="advantage-text">The accuracy rate of problem identification is 98.7%, reducing manual troubleshooting</div>
           </div>
           <div class="advantage-item">
             <div class="advantage-icon">🔄</div>
-            <div class="advantage-text">支持多工艺节点，兼容 7nm/5nm 先进制程</div>
+            <div class="advantage-text">It supports multiple process nodes and is compatible with 7nm/5nm advanced processes</div>
           </div>
         </div>
       </section>
 
       <!-- 技术细节 -->
       <section class="case-section">
-        <h2 class="section-title">技术细节</h2>
+        <h2 class="section-title">Technical details</h2>
         <ul class="tech-details">
-          <li>AI 模型：基于 Transformer 架构的设计模式识别网络</li>
-          <li>工具链支持：Cadence Virtuoso、Synopsys IC Compiler II 等</li>
-          <li>部署方式：本地服务器/云端 SaaS 两种模式可选</li>
-          <li>典型案例：某 5nm 移动处理器设计项目验证效率提升 42%</li>
+          <li>AI model: Design pattern-aware network based on the Transformer architecture</li>
+          <li>Toolchain support: Cadence Virtuoso, Synopsys IC Compiler II, etc.</li>
+          <li>Deployment mode: On-premise server or cloud SaaS mode is optional</li>
+          <li>Typical Case: A 5nm Mobile Processor Design Project Improves Verification Efficiency by 42%</li>
         </ul>
       </section>
 
       <!-- 联系咨询 -->
       <section class="contact-section">
         <div class="contact-card">
-          <h3 class="contact-title">获取详细方案资料</h3>
-          <button class="contact-btn">联系技术顾问</button>
+          <h3 class="contact-title">Get detailed program information</h3>
+          <button class="contact-btn">Contact a technical advisor</button>
         </div>
       </section>
     </div>

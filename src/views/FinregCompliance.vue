@@ -1,122 +1,120 @@
 <template>
   <div class="case-detail-page">
     <!-- 导航栏 -->
-    <nav class="case-nav">
+    <!-- <nav class="case-nav">
       <div class="back-link" @click="$router.back()">← 返回场景列表</div>
       <div class="nav-title">技术应用场景</div>
-    </nav>
+    </nav> -->
 
     <!-- 页面标题 -->
     <div class="case-header">
-      <h1 class="case-title">金融风控合规自动化解决方案</h1>
-      <div class="case-meta">Fin - reg compliance / 全流程自动化</div>
-      <div class="case-badge">适配 Basel III/GDPR 法规</div>
+      <h1 class="case-title">Financial risk control and compliance automation solutions</h1>
+      <div class="case-meta">Fin - reg compliance / Full process automation</div>
+      <div class="case-badge">Adaptation to Basel III/GDPR regulations</div>
     </div>
 
     <!-- 核心内容 -->
     <div class="case-content">
       <!-- 方案概述 -->
       <section class="case-section">
-        <h2 class="section-title">方案概述</h2>
+        <h2 class="section-title">Overview of the scenario</h2>
         <p class="section-desc">
-          本解决方案覆盖金融机构反洗钱、数据报送、KYC（客户身份验证）全流程，
-          基于AI算法自动识别可疑交易，智能生成合规报告，完全适配Basel III、GDPR等国际法规要求。
-          系统支持实时监控和预警，审计日志自动生成，帮助金融机构显著降低合规成本，提升风控效率。
+          This solution covers the whole process of anti-money laundering, data reporting, and KYC (customer identity verification) of financial institutions, automatically identifies suspicious transactions based on AI algorithms, intelligently generates compliance reports, and fully adapts to international regulatory requirements such as Basel III and GDPR. The system supports real-time monitoring and early warning, and audit logs are automatically generated, helping financial institutions significantly reduce compliance costs and improve risk control efficiency.
         </p>
       </section>
 
       <!-- 监管法规地图 -->
       <section class="case-section">
-        <h2 class="section-title">监管法规适配</h2>
+        <h2 class="section-title">Regulatory adaptation</h2>
         <div class="regulations-map">
           <div class="regulation-item" :class="{ active: isRegulationActive('basel') }" @click="toggleRegulation('basel')">
             <div class="regulation-icon">🏦</div>
             <div class="regulation-name">Basel III</div>
-            <div class="regulation-desc">资本充足率、流动性风险、杠杆率监管</div>
+            <div class="regulation-desc">Capital adequacy, liquidity risk, leverage regulation</div>
           </div>
           <div class="regulation-item" :class="{ active: isRegulationActive('gdpr') }" @click="toggleRegulation('gdpr')">
             <div class="regulation-icon">🔒</div>
             <div class="regulation-name">GDPR</div>
-            <div class="regulation-desc">个人数据保护与隐私法规</div>
+            <div class="regulation-desc">Personal Data Protection & Privacy Regulations</div>
           </div>
           <div class="regulation-item" :class="{ active: isRegulationActive('aml') }" @click="toggleRegulation('aml')">
             <div class="regulation-icon">🚫💸</div>
-            <div class="regulation-name">反洗钱法规</div>
-            <div class="regulation-desc">客户身份识别、可疑交易报告</div>
+            <div class="regulation-name">Anti-Money Laundering Regulations</div>
+            <div class="regulation-desc">Customer identification, suspicious transaction reporting</div>
           </div>
           <div class="regulation-item" :class="{ active: isRegulationActive('kyc') }" @click="toggleRegulation('kyc')">
             <div class="regulation-icon">👤</div>
-            <div class="regulation-name">KYC 合规</div>
-            <div class="regulation-desc">客户身份验证与持续监控</div>
+            <div class="regulation-name">KYC compliance</div>
+            <div class="regulation-desc">Customer authentication and continuous monitoring</div>
           </div>
         </div>
       </section>
 
       <!-- 风控流程 -->
       <section class="case-section">
-        <h2 class="section-title">风控流程</h2>
+        <h2 class="section-title">Risk control process</h2>
         <div class="risk-control-flow">
           <div class="flow-stage" :class="{ 'active-stage': currentFlowStage >= 1 }">
             <div class="stage-number">1</div>
-            <div class="stage-title">数据采集</div>
+            <div class="stage-title">Data acquisition</div>
             <div class="stage-content">
-              <p>多源数据实时接入，包括交易流水、客户信息、外部风险数据等</p>
+              <p>Real-time access to multi-source data, including transaction records, customer information, external risk data, etc</p>
               <ul>
-                <li>交易系统接口</li>
-                <li>客户关系管理系统</li>
-                <li>第三方数据服务</li>
+                <li>Trading system interface</li>
+                <li>Customer relationship management system</li>
+                <li>Third-Party Data Services</li>
               </ul>
             </div>
           </div>
           <div class="flow-connector"></div>
           <div class="flow-stage" :class="{ 'active-stage': currentFlowStage >= 2 }">
             <div class="stage-number">2</div>
-            <div class="stage-title">风险识别</div>
+            <div class="stage-title">Risk identification</div>
             <div class="stage-content">
-              <p>AI模型自动分析，识别可疑交易模式和风险点</p>
+              <p>The AI model automatically analyzes and identifies suspicious transaction patterns and risk points</p>
               <ul>
-                <li>异常交易检测</li>
-                <li>客户画像分析</li>
-                <li>风险评分计算</li>
+                <li>Abnormal transaction detection</li>
+                <li>Customer profiling analysis</li>
+                <li>Risk score calculations</li>
               </ul>
             </div>
           </div>
           <div class="flow-connector"></div>
           <div class="flow-stage" :class="{ 'active-stage': currentFlowStage >= 3 }">
             <div class="stage-number">3</div>
-            <div class="stage-title">合规审查</div>
+            <div class="stage-title">Compliance Review</div>
             <div class="stage-content">
-              <p>自动化合规检查，确保业务符合相关法规要求</p>
+              <p>Automate compliance checks to ensure your business is compliant</p>
               <ul>
-                <li>监管规则匹配</li>
-                <li>制裁名单筛查</li>
-                <li>利益冲突检测</li>
+                <li>Regulatory rule matching</li>
+                <li>Sanctions list screening</li>
+                <li>Conflict of Interest Detection</li>
               </ul>
             </div>
           </div>
           <div class="flow-connector"></div>
           <div class="flow-stage" :class="{ 'active-stage': currentFlowStage >= 4 }">
             <div class="stage-number">4</div>
-            <div class="stage-title">预警处置</div>
+            <div class="stage-title">Early warning disposal</div>
             <div class="stage-content">
-              <p>风险事件分级预警，支持人工干预和自动处理</p>
+              <p>Hierarchical early warning of risk events, supporting manual intervention and automatic processing</p>
               <ul>
-                <li>风险等级分类</li>
-                <li>自动冻结机制</li>
-                <li>调查流程管理</li>
+                <li>Risk level classification</li>
+                <li>Automatic freezing mechanism</li>
+                <li>Investigation process management</li>
               </ul>
             </div>
           </div>
           <div class="flow-connector"></div>
           <div class="flow-stage" :class="{ 'active-stage': currentFlowStage >= 5 }">
             <div class="stage-number">5</div>
-            <div class="stage-title">审计报告</div>
+            <div class="stage-title">Audit report</div>
             <div class="stage-content">
-              <p>自动生成合规审计报告，支持监管报送</p>
+              <p>Automatically generate compliance audit reports to support regulatory submissions</p>
               <ul>
-                <li>监管报表生成</li>
-                <li>审计日志存档</li>
-                <li>合规指标追踪</li>
+                <li>Regulatory report generation</li>
+                <li>Audit log archiving</li>
+                <li>Compliance metrics tracking</li>
               </ul>
             </div>
           </div>
@@ -125,52 +123,52 @@
 
       <!-- 技术架构 -->
       <section class="case-section">
-        <h2 class="section-title">技术架构</h2>
+        <h2 class="section-title">Technical architecture</h2>
         <div class="tech-architecture">
           <div class="layer" :class="{ 'active-layer': currentLayer === 1 }" @click="setActiveLayer(1)">
-            <div class="layer-title">数据层</div>
+            <div class="layer-title">Data layer</div>
             <div class="layer-content">
               <ul>
-                <li>多源数据采集</li>
-                <li>数据清洗与整合</li>
-                <li>实时数据存储</li>
-                <li>历史数据仓库</li>
+                <li>Multi-source data collection</li>
+                <li>Data cleansing and integration</li>
+                <li>Real-time data storage</li>
+                <li>Historical data warehouse</li>
               </ul>
             </div>
           </div>
           <div class="layer-connector"></div>
           <div class="layer" :class="{ 'active-layer': currentLayer === 2 }" @click="setActiveLayer(2)">
-            <div class="layer-title">引擎层</div>
+            <div class="layer-title">Engine layer</div>
             <div class="layer-content">
               <ul>
-                <li>规则引擎</li>
-                <li>机器学习模型</li>
-                <li>实时计算引擎</li>
-                <li>图计算平台</li>
+                <li>Rules Engine</li>
+                <li>Machine learning models</li>
+                <li>Real-time computing engine</li>
+                <li>Graph computing platform</li>
               </ul>
             </div>
           </div>
           <div class="layer-connector"></div>
           <div class="layer" :class="{ 'active-layer': currentLayer === 3 }" @click="setActiveLayer(3)">
-            <div class="layer-title">应用层</div>
+            <div class="layer-title">Application layer</div>
             <div class="layer-content">
               <ul>
-                <li>反洗钱系统</li>
-                <li>KYC管理系统</li>
-                <li>风险监控平台</li>
-                <li>合规报告系统</li>
+                <li>Anti-Money Laundering System</li>
+                <li>KYC management system</li>
+                <li>Risk monitoring platform</li>
+                <li>Compliance reporting system</li>
               </ul>
             </div>
           </div>
           <div class="layer-connector"></div>
           <div class="layer" :class="{ 'active-layer': currentLayer === 4 }" @click="setActiveLayer(4)">
-            <div class="layer-title">接入层</div>
+            <div class="layer-title">Access layer</div>
             <div class="layer-content">
               <ul>
-                <li>API网关</li>
-                <li>前端应用</li>
-                <li>移动端应用</li>
-                <li>报表与可视化</li>
+                <li>API Gateway</li>
+                <li>Front-end applications</li>
+                <li>Mobile app</li>
+                <li>Reports & Visualizations</li>
               </ul>
             </div>
           </div>
@@ -179,89 +177,87 @@
 
       <!-- 功能优势 -->
       <section class="case-section">
-        <h2 class="section-title">功能优势</h2>
+        <h2 class="section-title">Functional benefits</h2>
         <div class="features-grid">
           <div class="feature-item">
             <div class="feature-icon">🕒</div>
-            <div class="feature-title">实时监控</div>
-            <div class="feature-desc">7×24小时不间断交易监控，毫秒级响应速度</div>
+            <div class="feature-title">Real-time monitoring</div>
+            <div class="feature-desc">24×7 hours of uninterrupted transaction monitoring, millisecond response speed</div>
           </div>
           <div class="feature-item">
             <div class="feature-icon">🧠</div>
-            <div class="feature-title">AI智能分析</div>
-            <div class="feature-desc">基于深度学习的风险识别模型，准确率超过99.5%</div>
+            <div class="feature-title">AI intelligent analysis</div>
+            <div class="feature-desc">Deep learning-based risk identification model with an accuracy rate of more than 99.5%</div>
           </div>
           <div class="feature-item">
             <div class="feature-icon">🔄</div>
-            <div class="feature-title">自适应规则</div>
-            <div class="feature-desc">自动学习最新监管要求，规则自动更新</div>
+            <div class="feature-title">Adaptive rules</div>
+            <div class="feature-desc">Automatically learn the latest regulatory requirements and automatically update rules</div>
           </div>
           <div class="feature-item">
             <div class="feature-icon">📊</div>
-            <div class="feature-title">可视化分析</div>
-            <div class="feature-desc">多维度风险分析报表，支持交互式查询</div>
+            <div class="feature-title">Visual analytics</div>
+            <div class="feature-desc">Multi-dimensional risk analysis reports support interactive queries</div>
           </div>
           <div class="feature-item">
             <div class="feature-icon">📈</div>
-            <div class="feature-title">性能优化</div>
-            <div class="feature-desc">处理能力达每秒10,000+笔交易，支持水平扩展</div>
+            <div class="feature-title">Performance optimization</div>
+            <div class="feature-desc">The processing capacity reaches 10,000+ transactions per second, and supports horizontal scaling</div>
           </div>
           <div class="feature-item">
             <div class="feature-icon">🔐</div>
-            <div class="feature-title">安全可靠</div>
-            <div class="feature-desc">符合ISO 27001信息安全管理体系标准</div>
+            <div class="feature-title">Safe and reliable</div>
+            <div class="feature-desc">Compliant with ISO 27001 Information Security Management System standard</div>
           </div>
         </div>
       </section>
 
       <!-- 客户案例 -->
       <section class="case-section">
-        <h2 class="section-title">客户案例</h2>
+        <h2 class="section-title">Customer stories</h2>
         <div class="customer-cases">
           <div class="case-item">
-            <div class="case-logo">某大型商业银行</div>
+            <div class="case-logo">A large commercial bank</div>
             <div class="case-content">
-              <h3 class="case-title">反洗钱系统升级</h3>
+              <h3 class="case-title">Anti-money laundering system upgrade</h3>
               <p class="case-desc">
-                部署本解决方案后，可疑交易识别准确率提升58%，人工审核工作量减少70%，
-                监管报送合规率达到100%，每年节省合规成本超过1500万元。
+                After the deployment of this solution, the accuracy rate of suspicious transaction identification has been increased by 58%, the workload of manual review has been reduced by 70%, and the compliance rate of regulatory reporting has reached 100%, saving more than 15 million yuan in compliance costs every year.
               </p>
               <div class="case-results">
                 <div class="result-item">
                   <div class="result-value">58%</div>
-                  <div class="result-label">识别准确率提升</div>
+                  <div class="result-label">Recognition accuracy is improved</div>
                 </div>
                 <div class="result-item">
                   <div class="result-value">70%</div>
-                  <div class="result-label">人工审核量减少</div>
+                  <div class="result-label">Fewer manual reviews</div>
                 </div>
                 <div class="result-item">
                   <div class="result-value">1500万</div>
-                  <div class="result-label">年节省成本</div>
+                  <div class="result-label">annual cost savings</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="case-item">
-            <div class="case-logo">某国际保险公司</div>
+            <div class="case-logo">An international insurance company</div>
             <div class="case-content">
-              <h3 class="case-title">KYC流程自动化</h3>
+              <h3 class="case-title">Automate the KYC process</h3>
               <p class="case-desc">
-                通过引入AI驱动的KYC流程，客户身份验证时间从平均3天缩短至2小时，
-                客户开户转化率提升22%，风险客户拦截率提高35%，实现了合规与体验的双赢。
+                Through the introduction of the AI-driven KYC process, the customer identity verification time has been shortened from an average of 3 days to 2 hours, the conversion rate of customer account opening has increased by 22%, and the interception rate of at-risk customers has increased by 35%, achieving a win-win situation for compliance and experience.
               </p>
               <div class="case-results">
                 <div class="result-item">
                   <div class="result-value">93%</div>
-                  <div class="result-label">验证时间缩短</div>
+                  <div class="result-label">Verification time is reduced</div>
                 </div>
                 <div class="result-item">
                   <div class="result-value">22%</div>
-                  <div class="result-label">开户转化率提升</div>
+                  <div class="result-label">The conversion rate of account opening has increased</div>
                 </div>
                 <div class="result-item">
                   <div class="result-value">35%</div>
-                  <div class="result-label">风险拦截率提高</div>
+                  <div class="result-label">The risk interception rate has increased</div>
                 </div>
               </div>
             </div>
@@ -272,8 +268,8 @@
       <!-- 联系咨询 -->
       <section class="contact-section">
         <div class="contact-card">
-          <h3 class="contact-title">获取详细方案资料</h3>
-          <button class="contact-btn">联系技术顾问</button>
+          <h3 class="contact-title">Get detailed program information</h3>
+          <button class="contact-btn">Contact a technical advisor</button>
         </div>
       </section>
     </div>
