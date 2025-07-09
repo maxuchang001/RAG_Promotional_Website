@@ -43,7 +43,21 @@
             </div>
             <h3 class="title">{{ post.title }}</h3>
             <p class="excerpt">{{ post.excerpt }}</p>
-            <el-button type="primary" link :href="post.href">Read more</el-button>
+            <router-link
+              v-if="post.href && post.href.startsWith('/')"
+              :to="post.href"
+              custom
+              v-slot="{ navigate }"
+            >
+              <el-button type="primary" link @click="navigate">Read more</el-button>
+            </router-link>
+            <el-button
+              v-else
+              type="primary"
+              link
+              :href="post.href"
+              target="_blank"
+            >Read more</el-button>
           </div>
         </article>
       </div>
@@ -54,13 +68,25 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-// Dummy data — replace with API call when backend is ready
+// Use direct image links for blog covers
 const posts = ref([
   {
     id: 1,
+    title: 'Why Customizing Dataset Agents Is Crucial for Optimal Performance',
+    excerpt:
+      'In enterprise settings, generic LLMs often miss domain-specific context. Combining fine-tuning with RAG yields a 28 % accuracy boost and delivers truly reliable, outcome-driven agents.',
+    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80',
+    date: 'July 7, 2025',
+    category: 'Best Practices',
+    tags: ['Customization', 'RAG', 'Fine-Tuning'],
+    readtime: 8,
+    href: '/blog/customizing-dataset-agents',
+  },
+  {
+    id: 2,
     title: 'Introducing Datastore Pipelines: Scalable Data Ingestion for Enterprises',
     excerpt: 'Learn how our new Pipelines architecture makes it effortless to import millions of documents, monitor progress, and enforce quality gates.',
-    image: 'https://source.unsplash.com/featured/600x400?abstract',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80',
     date: 'June 25, 2025',
     category: 'Product',
     tags: ['Data Ingestion', 'Product'],
@@ -68,10 +94,10 @@ const posts = ref([
     href: '#',
   },
   {
-    id: 2,
+    id: 3,
     title: 'From Retrieval to Generation: A Practical Guide to Evaluation Metrics for RAG',
     excerpt: 'Precision, recall, answer-correctness—what really matters? We break down evaluation strategies you can implement today.',
-    image: 'https://source.unsplash.com/featured/600x400?data',
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80',
     date: 'May 14, 2025',
     category: 'Engineering',
     tags: ['RAG', 'Evaluation'],
@@ -79,16 +105,16 @@ const posts = ref([
     href: '#',
   },
   {
-    id: 3,
+    id: 4,
     title: 'SOC 2 Type II & HIPAA: Security at Every Layer of Contextual AI',
     excerpt: 'Our commitment to enterprise-grade security is now validated by independent auditors. Here’s what it means for customers.',
-    image: 'https://source.unsplash.com/featured/600x400?security',
+    image: 'https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80',
     date: 'April 2, 2025',
     category: 'Company',
     tags: ['Security', 'Compliance'],
     readtime: 4,
     href: '#',
-  },
+  }
 ])
 
 const search = ref('')
