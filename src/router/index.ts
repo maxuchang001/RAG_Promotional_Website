@@ -10,6 +10,7 @@ import AutonomousVehicles from "../views/AutonomousVehicles.vue";
 import MedicalRobotics from "../views/MedicalRobotics.vue";
 import FinregCompliance from "../views/FinregCompliance.vue";
 import Customize from '../blogs/Customize.vue';
+import BeginnerGuide from '../docs/BeginnerGuide.vue';
 
 
 const routes = [
@@ -23,7 +24,8 @@ const routes = [
   { path: '/autonomousvehicles', name: 'AutonomousVehicles', component: AutonomousVehicles },
   { path: '/medicalrobotics', name: 'MedicalRobotics', component: MedicalRobotics },
   { path: '/finregcompliance', name: 'FinregCompliance', component: FinregCompliance },
-  { path: '/blog/customizing-dataset-agents', name: 'Customize', component: Customize }
+  { path: '/blog/customizing-dataset-agents', name: 'Customize', component: Customize },
+  { path: '/docs/beginner-guide', name: 'BeginnerGuide', component: BeginnerGuide }
 ];
 
 const router = createRouter({
