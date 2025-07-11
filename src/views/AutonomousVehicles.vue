@@ -1,174 +1,163 @@
 <template>
   <div class="case-detail-page">
-    <!-- 导航栏 -->
-    <!-- <nav class="case-nav">
-      <div class="back-link" @click="$router.back()">← 返回场景列表</div>
-      <div class="nav-title">技术应用场景</div>
-    </nav> -->
-
-    <!-- 页面标题 -->
+    <!-- Page Header -->
     <div class="case-header">
-      <h1 class="case-title">自动驾驶全栈感知与决策方案</h1>
-      <div class="case-meta">Autonomous vehicles / L4 级方案</div>
-      <div class="case-badge">通过 ISO 26262 功能安全认证</div>
+      <h1 class="case-title">Full-Stack Perception and Decision Solution for Autonomous Vehicles</h1>
+      <div class="case-meta">Autonomous vehicles / L4 Solution</div>
+      <div class="case-badge">ISO 26262 Functional Safety Certified</div>
     </div>
 
-    <!-- 核心内容 -->
+    <!-- Main Content -->
     <div class="case-content">
-      <!-- 方案概述 -->
+      <!-- Solution Overview -->
       <section class="case-section">
-        <h2 class="section-title">方案概述</h2>
+        <h2 class="section-title">Solution Overview</h2>
         <p class="section-desc">
-          本方案为 L4 级自动驾驶提供全栈感知与决策支持，可覆盖城市道路、高速公路等多场景，支持 12 路摄像头与激光雷达融合感知，
-          已通过 ISO 26262 功能安全认证，确保自动驾驶系统的高可靠性。系统采用模块化设计，可根据不同车型和应用场景进行定制化配置。
+          This solution provides full-stack perception and decision support for L4 autonomous driving, covering urban roads, highways, and more. It supports fusion perception from 12 cameras and LiDAR, and has passed ISO 26262 functional safety certification to ensure high reliability. The system uses modular design and can be customized for different vehicle models and application scenarios.
         </p>
       </section>
 
-      <!-- 技术架构 -->
+      <!-- Technical Architecture -->
       <section class="case-section">
-        <h2 class="section-title">技术架构</h2>
+        <h2 class="section-title">Technical Architecture</h2>
         <div class="architecture-diagram">
           <div class="layer">
-            <div class="layer-title">传感器层</div>
-            <div class="component">12路摄像头</div>
-            <div class="component">激光雷达</div>
-            <div class="component">毫米波雷达</div>
-            <div class="component">超声波传感器</div>
+            <div class="layer-title">Sensor Layer</div>
+            <div class="component">12 Cameras</div>
+            <div class="component">LiDAR</div>
+            <div class="component">Millimeter-Wave Radar</div>
+            <div class="component">Ultrasonic Sensors</div>
           </div>
           <div class="connection"></div>
           <div class="layer">
-            <div class="layer-title">感知层</div>
-            <div class="component">目标检测</div>
-            <div class="component">语义分割</div>
-            <div class="component">多传感器融合</div>
-            <div class="component">场景理解</div>
+            <div class="layer-title">Perception Layer</div>
+            <div class="component">Object Detection</div>
+            <div class="component">Semantic Segmentation</div>
+            <div class="component">Multi-Sensor Fusion</div>
+            <div class="component">Scene Understanding</div>
           </div>
           <div class="connection"></div>
           <div class="layer">
-            <div class="layer-title">决策层</div>
-            <div class="component">路径规划</div>
-            <div class="component">行为决策</div>
-            <div class="component">运动控制</div>
+            <div class="layer-title">Decision Layer</div>
+            <div class="component">Path Planning</div>
+            <div class="component">Behavior Decision</div>
+            <div class="component">Motion Control</div>
           </div>
           <div class="connection"></div>
           <div class="layer">
-            <div class="layer-title">执行层</div>
-            <div class="component">转向控制</div>
-            <div class="component">加速控制</div>
-            <div class="component">制动控制</div>
+            <div class="layer-title">Execution Layer</div>
+            <div class="component">Steering Control</div>
+            <div class="component">Acceleration Control</div>
+            <div class="component">Braking Control</div>
           </div>
         </div>
       </section>
 
-      <!-- 核心优势 -->
+      <!-- Key Advantages -->
       <section class="case-section">
-        <h2 class="section-title">核心优势</h2>
+        <h2 class="section-title">Key Advantages</h2>
         <div class="advantages-list">
           <div class="advantage-item">
             <div class="advantage-icon">👁️</div>
-            <div class="advantage-text">360° 全向感知，探测距离达 200 米</div>
+            <div class="advantage-text">360° omnidirectional perception, detection range up to 200 meters</div>
           </div>
           <div class="advantage-item">
             <div class="advantage-icon">⚙️</div>
-            <div class="advantage-text">实时处理速度 &lt;50ms，响应迅速</div>
+            <div class="advantage-text">Real-time processing speed &lt;50ms, fast response</div>
           </div>
           <div class="advantage-item">
             <div class="advantage-icon">🌧️</div>
-            <div class="advantage-text">全天候工作能力，支持雨、雪、雾等恶劣天气</div>
+            <div class="advantage-text">All-weather capability, supports rain, snow, fog, and other harsh conditions</div>
           </div>
           <div class="advantage-item">
             <div class="advantage-icon">🔒</div>
-            <div class="advantage-text">功能安全设计，符合 ISO 26262 ASIL-D 等级</div>
+            <div class="advantage-text">Functional safety design, meets ISO 26262 ASIL-D level</div>
           </div>
         </div>
       </section>
 
-      <!-- 系统演示 -->
+      <!-- System Demo -->
       <section class="case-section">
-        <h2 class="section-title">系统演示</h2>
+        <h2 class="section-title">System Demo</h2>
         <div class="demo-container">
           <div class="demo-video">
-            <!-- 视频占位图 -->
+            <!-- Video Placeholder -->
             <div class="video-placeholder">
               <div class="play-button">▶️</div>
-              <div class="video-info">系统运行演示视频</div>
+              <div class="video-info">System Operation Demo Video</div>
             </div>
           </div>
           <div class="demo-info">
-            <h3 class="demo-title">多传感器融合效果</h3>
+            <h3 class="demo-title">Multi-Sensor Fusion Effects</h3>
             <p class="demo-desc">
-              本视频展示了系统在城市道路环境下的实时运行效果，包括目标检测、轨迹预测和决策规划等功能。
-              系统能够准确识别行人、车辆、交通标志和信号灯，并做出安全合理的驾驶决策。
+              This video shows the system's real-time operation in urban road environments, including object detection, trajectory prediction, and decision planning. The system accurately identifies pedestrians, vehicles, traffic signs, and signals, and makes safe and reasonable driving decisions.
             </p>
             <ul class="demo-features">
-              <li>实时目标检测与跟踪</li>
-              <li>复杂场景下的路径规划</li>
-              <li>动态障碍物避让策略</li>
-              <li>交通规则自动遵守</li>
+              <li>Real-time object detection and tracking</li>
+              <li>Path planning in complex scenarios</li>
+              <li>Dynamic obstacle avoidance strategies</li>
+              <li>Automatic compliance with traffic rules</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- 安全认证 -->
+      <!-- Safety Certifications -->
       <section class="case-section">
-        <h2 class="section-title">安全认证</h2>
+        <h2 class="section-title">Safety Certifications</h2>
         <div class="certifications">
           <div class="certification-item">
             <div class="certification-logo">ISO 26262</div>
-            <div class="certification-desc">功能安全认证（ASIL-D 等级）</div>
+            <div class="certification-desc">Functional Safety Certification (ASIL-D Level)</div>
           </div>
           <div class="certification-item">
             <div class="certification-logo">ISO 9001</div>
-            <div class="certification-desc">质量管理体系认证</div>
+            <div class="certification-desc">Quality Management System Certification</div>
           </div>
           <div class="certification-item">
             <div class="certification-logo">ISO 14001</div>
-            <div class="certification-desc">环境管理体系认证</div>
+            <div class="certification-desc">Environmental Management System Certification</div>
           </div>
         </div>
         <p class="certification-note">
-          我们的系统经过严格测试和验证，符合国际安全标准，确保在各种情况下都能提供可靠的自动驾驶功能。
-          通过冗余设计和故障安全机制，系统能够在发生故障时安全停车，最大限度降低风险。
+          Our system has undergone rigorous testing and validation, meeting international safety standards to ensure reliable autonomous driving in all conditions. Through redundancy design and fail-safe mechanisms, the system can safely stop in case of failure, minimizing risk.
         </p>
       </section>
 
-      <!-- 实际应用案例 -->
+      <!-- Real-World Case Studies -->
       <section class="case-section">
-        <h2 class="section-title">实际应用案例</h2>
+        <h2 class="section-title">Real-World Case Studies</h2>
         <div class="case-studies">
           <div class="study-item">
             <div class="study-image">
-              <img src="https://picsum.photos/seed/av1/400/200" alt="自动驾驶出租车服务" />
+              <img src="https://picsum.photos/seed/av1/400/200" alt="Autonomous Taxi Service" />
             </div>
             <div class="study-content">
-              <h3 class="study-title">自动驾驶出租车服务</h3>
+              <h3 class="study-title">Autonomous Taxi Service</h3>
               <p class="study-desc">
-                在某一线城市部署的自动驾驶出租车服务，累计安全行驶超过 100 万公里，
-                日均服务乘客超过 5000 人次，高峰期接单响应速度提升 30%。
+                Deployed in a major city, the autonomous taxi service has safely driven over 1 million kilometers, serving more than 5,000 passengers daily. Peak order response speed increased by 30%.
               </p>
             </div>
           </div>
           <div class="study-item">
             <div class="study-image">
-              <img src="https://picsum.photos/seed/av2/400/200" alt="物流配送场景" />
+              <img src="https://picsum.photos/seed/av2/400/200" alt="Logistics Delivery Scenario" />
             </div>
             <div class="study-content">
-              <h3 class="study-title">物流配送场景</h3>
+              <h3 class="study-title">Logistics Delivery Scenario</h3>
               <p class="study-desc">
-                应用于城市物流配送，实现 24 小时不间断运输，配送效率提升 40%，
-                运营成本降低 35%，特别适合商超补货、快递末端配送等场景。
+                Applied to urban logistics delivery, enabling 24/7 continuous transport, improving delivery efficiency by 40%, and reducing operating costs by 35%. Especially suitable for supermarket restocking and last-mile delivery.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 联系咨询 -->
+      <!-- Contact -->
       <section class="contact-section">
         <div class="contact-card">
-          <h3 class="contact-title">获取详细方案资料</h3>
-          <button class="contact-btn">联系技术顾问</button>
+          <h3 class="contact-title">Get Detailed Solution Materials</h3>
+          <button class="contact-btn">Contact Technical Consultant</button>
         </div>
       </section>
     </div>
@@ -176,14 +165,13 @@
 </template>
 
 <script setup>
-// 页面交互逻辑
 import { ref } from 'vue'
 
 const isVideoPlaying = ref(false)
 
 const toggleVideoPlay = () => {
   isVideoPlaying.value = !isVideoPlaying.value
-  // 实际项目中这里应该有真实的视频播放逻辑
+  // In a real project, add actual video play logic here
 }
 </script>
 
