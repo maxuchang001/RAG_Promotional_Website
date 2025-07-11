@@ -14,7 +14,7 @@
       </div>
     </section>
 
-    <!-- Features -->
+    <!-- Key Features -->
     <section class="features-section">
       <h2 class="section-title">Key Features</h2>
       <el-row :gutter="24" class="feature-grid">
@@ -23,13 +23,15 @@
           :key="feature.title"
           :xs="24"
           :sm="12"
-          :md="8"
+          :md="6"
         >
-          <el-card shadow="hover" class="feature-card">
-            <component :is="feature.icon" class="feature-icon" />
+          <div class="feature-box">
+            <div class="icon-wrapper">
+              <component :is="feature.icon" class="feature-icon" />
+            </div>
             <h3 class="feature-title">{{ feature.title }}</h3>
             <p class="feature-desc">{{ feature.desc }}</p>
-          </el-card>
+          </div>
         </el-col>
       </el-row>
     </section>
@@ -43,8 +45,8 @@
         class="workflow-steps"
       >
         <el-step
-          v-for="(step, index) in workflow"
-          :key="index"
+          v-for="(step, i) in workflow"
+          :key="i"
           :title="step.title"
           :description="step.desc"
         />
@@ -57,29 +59,6 @@
       <ul class="benefits-list">
         <li v-for="b in benefits" :key="b">{{ b }}</li>
       </ul>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials-section">
-      <h2 class="section-title">What Our Users Say</h2>
-      <el-carousel height="180px" interval="6000" type="card">
-        <el-carousel-item v-for="(t, i) in testimonials" :key="i">
-          <div class="testimonial">
-            <p class="quote">“{{ t.quote }}”</p>
-            <p class="author">— {{ t.author }}, {{ t.role }}</p>
-          </div>
-        </el-carousel-item>
-      </el-carousel>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq-section">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <el-collapse accordion>
-        <el-collapse-item v-for="(faq, i) in faqs" :key="i" :title="faq.q">
-          <p>{{ faq.a }}</p>
-        </el-collapse-item>
-      </el-collapse>
     </section>
 
     <!-- CTA -->
@@ -100,17 +79,16 @@ import {
   Collection,
 } from "@element-plus/icons-vue";
 
-// Feature cards
 const features = [
   {
     icon: DocumentChecked,
     title: "Auto Classification",
-    desc: "AI-powered classification and tagging across 10+ doc types.",
+    desc: "AI‑powered classification and tagging across 10+ doc types.",
   },
   {
     icon: Files,
     title: "Version Control",
-    desc: "End-to-end change tracking with rollback.",
+    desc: "End‑to‑end change tracking with rollback.",
   },
   {
     icon: ChatDotSquare,
@@ -124,185 +102,127 @@ const features = [
   },
 ];
 
-// Workflow
 const workflow = [
   { title: "Upload docs", desc: "Drag & drop or sync from Git." },
   { title: "AI parsing", desc: "LLM + vector store extracts key info." },
-  {
-    title: "Knowledge base build",
-    desc: "Semantic search & chat enabled instantly.",
-  },
-  { title: "Collaboration", desc: "Assign roles, comment inline, co-edit." },
-  {
-    title: "Reporting",
-    desc: "Generate spec summaries and compliance PDFs.",
-  },
+  { title: "Knowledge base", desc: "Instant semantic search & chat." },
+  { title: "Collaboration", desc: "Role‑based comments and co‑editing." },
+  { title: "Reporting", desc: "Generate spec summaries & PDFs." },
 ];
 
-// Benefits
 const benefits = [
-  "Accelerate time-to-tape-out with automated knowledge extraction.",
-  "Reduce re-spins by maintaining a single source of truth.",
-  "Secure collaboration with fine-grained ACLs.",
+  "Accelerate time‑to‑tape‑out with automated knowledge extraction.",
+  "Reduce re‑spins by maintaining a single source of truth.",
+  "Secure collaboration with fine‑grained ACLs.",
   "Seamless integration with Git, Confluence, and Jira.",
-];
-
-// Testimonials
-const testimonials = [
-  {
-    quote: "Cut our spec search time by 70% and eliminated costly errors.",
-    author: "Ada Lin",
-    role: "Principal Design Engineer, Cirrus Logic",
-  },
-  {
-    quote: "The AI Q&A is a game-changer for onboarding new team members.",
-    author: "Michael Chen",
-    role: "Director of Engineering, Cadence",
-  },
-];
-
-// FAQs
-const faqs = [
-  {
-    q: "What document formats are supported?",
-    a: "PDF, Word, Markdown, schematic .sch, netlist, and more.",
-  },
-  {
-    q: "Can I deploy on-prem?",
-    a: "Yes, we offer both SaaS and private VPC/on-prem deployments.",
-  },
-  {
-    q: "Does it integrate with Jira?",
-    a: "Absolutely – create tickets from findings with one click.",
-  },
 ];
 </script>
 
 <style scoped>
+/**** Layout ****/
 .chip-design-page {
   padding: 32px 20px;
-  max-width: 1180px;
+  max-width: 1200px;
   margin: 0 auto;
-  background: #fafbfc;
 }
-
-/* Shared */
 .section-title {
   text-align: center;
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-bottom: 28px;
-  color: #222;
+  font-size: 28px;
+  margin-bottom: 32px;
 }
 
-/* Hero */
+/**** Hero ****/
 .hero {
-  background: linear-gradient(120deg, #eaf0ff 0%, #f7faff 100%);
+  background: linear-gradient(135deg, #3558ff, #5c7bff);
   border-radius: 16px;
-  padding: 56px 20px 48px 20px;
-  margin-bottom: 56px;
-  box-shadow: 0 2px 12px rgba(80, 120, 255, 0.04);
+  padding: 60px 20px;
+  margin-bottom: 72px;
+  color: #fff;
+  text-align: center;
 }
 .hero-inner {
   max-width: 700px;
   margin: 0 auto;
-  text-align: center;
-  color: #223;
 }
 .hero h1 {
-  font-size: 2.1rem;
+  font-size: 36px;
   font-weight: 700;
-  margin-bottom: 14px;
-  color: #223;
+  margin-bottom: 16px;
 }
 .subtitle {
-  font-size: 1.08rem;
-  opacity: 0.93;
-  margin-bottom: 24px;
-  color: #4a4a4a;
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 28px;
 }
 
-/* Features */
-.feature-card {
+/**** Key Features ****/
+.feature-box {
+  background: #f9fafc;
+  border-radius: 14px;
+  padding: 32px 24px;
   text-align: center;
-  border-radius: 12px;
-  min-height: 80px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  transition: box-shadow 0.18s, transform 0.18s;
-  padding: 28px 16px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(80, 120, 255, 0.03);
+  align-items: center;
 }
-.feature-card:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(80, 120, 255, 0.07);
+.feature-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+}
+.icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--el-color-primary-light-9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
 }
 .feature-icon {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #5c7bff;
+  font-size: 22px;
+  color: var(--el-color-primary);
 }
 .feature-title {
   font-weight: 600;
   margin-bottom: 4px;
-  font-size: 1.08rem;
 }
 .feature-desc {
   font-size: 14px;
   color: #555;
+  flex: 1 0 auto;
 }
 
-/* Workflow */
+/**** Workflow ****/
+.workflow-section {
+  margin-top: 72px;
+}
 .workflow-steps {
   max-width: 540px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 48px auto;
 }
 
-/* Benefits */
+/**** Benefits ****/
+.benefits-section {
+  margin-top: 72px;
+}
 .benefits-list {
-  margin: 0 auto 40px auto;
   max-width: 760px;
-  line-height: 2;
+  margin: 0 auto 48px auto;
   list-style: disc inside;
+  line-height: 1.9;
   color: #444;
-  font-size: 1rem;
 }
 
-/* Testimonials */
-.testimonials-section {
-  margin-bottom: 48px;
-}
-.testimonial {
-  padding: 18px 24px;
-  text-align: center;
-}
-.quote {
-  font-style: italic;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  color: #333;
-}
-.author {
-  font-weight: 600;
-  color: #5c7bff;
-}
-
-/* FAQ */
-.faq-section {
-  margin-bottom: 56px;
-}
-
-/* CTA */
+/**** CTA ****/
 .cta-wrapper {
   text-align: center;
-  padding: 56px 20px;
+  padding: 80px 20px;
   background: #f5f7ff;
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(80, 120, 255, 0.03);
+  border-radius: 16px;
 }
 .cta-wrapper h2 {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 </style>
