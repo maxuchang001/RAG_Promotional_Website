@@ -19,12 +19,12 @@
               <el-collapse v-model="activeName" accordion>
                 <el-collapse-item title="INITIAL DEMO" name="1">
                   <div>
-                    Seamlessly create a RAG agent in minutes to showcase the value of your use case to technical stakeholders and business end-users。
+                    Seamlessly create a RAG agent in minutes to showcase the value of your use case to technical stakeholders and business end-users.
                   </div>
                 </el-collapse-item>
                 <el-collapse-item title="PROOF OF CONCEPT" name="2">
                   <div>
-                    Connect your technical documents and structured data to enable your RAG agents to reason over all of your enterprise knowledge。
+                    Connect your technical documents and structured data to enable your RAG agents to reason over all of your enterprise knowledge.
                   </div>
                 </el-collapse-item>
                 <el-collapse-item title="PRODUCTION PREP" name="3">

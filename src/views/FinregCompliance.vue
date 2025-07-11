@@ -368,7 +368,7 @@ onMounted(() => {
 
 .case-badge {
   display: inline-block;
-  background-color: #4caf50;
+  background-color: #007bff;
   color: white;
   padding: 4px 12px;
   border-radius: 16px;

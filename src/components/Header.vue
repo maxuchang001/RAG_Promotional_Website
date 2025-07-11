@@ -10,8 +10,8 @@
       <el-sub-menu index="4" >
         <template #title>Use-cases</template>
         <el-menu-item index="4-1" @click="handleMenuClick('/chipdesigncase')">Chip design</el-menu-item>
-        <!-- <el-menu-item index="4-2" @click="handleMenuClick('/autonomousvehicles')">Technology & Engineering</el-menu-item>
-        <el-menu-item index="4-3" @click="handleMenuClick('/medicalrobotics')">Medical robotics</el-menu-item> -->
+        <el-menu-item index="4-2" @click="handleMenuClick('/autonomousvehicles')">Technology & Engineering</el-menu-item>
+        <el-menu-item index="4-3" @click="handleMenuClick('/medicalrobotics')">Medical robotics</el-menu-item>
         <el-menu-item index="4-4" @click="handleMenuClick('/finregcompliance')">Fin-reg compliance</el-menu-item>
       </el-sub-menu>
       <el-menu-item index="5" @click="handleMenuClick('/pricing')">Pricing</el-menu-item>

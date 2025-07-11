@@ -1,10 +1,10 @@
 <template>
   <div class="case-detail-page">
     <!-- 导航栏 -->
-    <nav class="case-nav">
+    <!-- <nav class="case-nav">
       <div class="back-link" @click="$router.back()">← 返回场景列表</div>
       <div class="nav-title">技术应用场景</div>
-    </nav>
+    </nav> -->
 
     <!-- 页面标题 -->
     <div class="case-header">
@@ -237,7 +237,7 @@ const toggleVideoPlay = () => {
 
 .case-badge {
   display: inline-block;
-  background-color: #4caf50;
+  background-color: #007bff;
   color: white;
   padding: 4px 12px;
   border-radius: 16px;
