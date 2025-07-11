@@ -134,6 +134,38 @@
       <el-button type="primary">Contact Us</el-button>
     </div>
 
+    <!-- Free Trial Policy -->
+    <div class="free-trial-note">
+      <h3>Free Trial Policy</h3>
+      <ul>
+        <li>
+          <strong>7-day free trial</strong> <span style="color:#409EFF;">✔</span>
+        </li>
+        <li>
+          Up to <strong>30 users</strong> per trial application
+        </li>
+        <li>
+          Up to <strong>1,500 index hours</strong> per trial application
+        </li>
+      </ul>
+      <div class="trial-details">
+        <ol>
+          <li>
+            <strong>API trial exclusion:</strong> Anonymous Chat and ChatSync API do not provide free trials. We recommend customers use Encryagent user subscriptions for Proof of Concept.
+          </li>
+          <li>
+            <strong>Trial application quota:</strong> Each Encryagent account can create up to <span style="color:#e53935;">7</span> free trial applications. Each trial includes 30 user seats, 1,500 index hours, and is valid for 7 days.
+          </li>
+          <li>
+            <strong>Trial period start:</strong> The 7-day trial period starts when you create the Encryagent application.
+          </li>
+          <li>
+            <strong>API billing rule:</strong> Regardless of whether you are a verified user or a subscriber, Anonymous Chat and ChatSync API are billed by actual usage.
+          </li>
+        </ol>
+      </div>
+    </div>
+
     <!-- Disclaimer -->
     <div class="note">
       <el-alert
@@ -279,5 +311,64 @@
 }
 .note {
   margin-top: 32px;
+}
+.free-trial-note {
+  margin: 48px auto 0 auto;
+  background: linear-gradient(120deg, #f7faff 80%, #eaf3ff 100%);
+  border-radius: 14px;
+  padding: 32px 28px;
+  max-width: 680px;
+  box-shadow: 0 2px 12px rgba(64,158,255,0.06);
+  border: 1px solid #e3eafc;
+  transition: box-shadow 0.2s;
+}
+.free-trial-note h3 {
+  margin-bottom: 18px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2266bb;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.free-trial-note ul {
+  margin-bottom: 18px;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+.free-trial-note ul li {
+  background: #eaf3ff;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1.05rem;
+  color: #2266bb;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(64,158,255,0.04);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.trial-details {
+  font-size: 0.99rem;
+  color: #444;
+  background: #fafdff;
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-top: 8px;
+  box-shadow: 0 1px 4px rgba(64,158,255,0.03);
+}
+.trial-details ol {
+  margin: 0;
+  padding-left: 20px;
+}
+.trial-details li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+.trial-details span {
+  color: #e53935;
+  font-weight: 600;
 }
 </style>
