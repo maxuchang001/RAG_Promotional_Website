@@ -19,7 +19,7 @@
           <div class="item-detail" v-show="true">
             <p>Verify content comprehension accuracy with <strong>three rounds of progressive testing</strong>:</p>
             <ol>
-              <li>Basic validation: covering 1000+ documents in standard formats (PDF/Word/Markdown)</li>
+              <li>Basic validation: covering 1000+ documents in standard formats (PDF/Word/excel/PPT)</li>
               <li>Complex scenarios: contain specialized terminology (e.g., medical/legal fields), fuzzy semantics, cross-chapter association testing</li>
               <li>Dynamic updates: Introduce new typical documents in the industry (such as new financial regulations and technical white papers) every month.</li>
             </ol>
@@ -148,7 +148,7 @@
         <br>
         All tests are supervised and carried out by <strong>a third-party neutral organization</strong> to ensure that the results are objective and credible.
       </p>
-      <a href="#" class="report-link" target="_blank">View the full test report</a>
+      <a class="report-link" target="_blank">View the full test report</a>
     </div>
   </div>
 </template>

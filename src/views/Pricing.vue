@@ -131,7 +131,7 @@
     <div class="cta">
       <h3>Let's Get Started</h3>
       <p>Platform AI is trusted by industry leaders such as HSBC, Qualcomm, and Hudl for their most complex, knowledge-intensive AI scenarios.</p>
-      <el-button type="success">Contact Us</el-button>
+      <el-button type="primary">Contact Us</el-button>
     </div>
 
     <!-- Disclaimer -->

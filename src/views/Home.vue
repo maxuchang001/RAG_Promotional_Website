@@ -75,7 +75,7 @@
 <script setup lang="ts">
 
 const cards = [
-  { title: 'Chip Design Documentation', desc: 'Supports a variety of chip design document formats, including PDF, Word, Markdown, etc., and realizes intelligent understanding of scenarios through the supported RAG technology. The accuracy is up to 85%.' },
+  { title: 'Chip Design Documentation', desc: 'Supports a variety of chip design document formats, including PDF, Word, excel, PPT, etc., and realizes intelligent understanding of scenarios through the supported RAG technology. The accuracy is up to 85%.' },
   { title: 'Use Case Demonstration', desc: 'Demonstrate the application effect in different scenarios through typical example demonstrations, covering from small teams to large enterprises.' },
   { title: 'Verification of accuracy', desc: 'A strict accuracy verification mechanism is used to ensure the quality of information extraction and Q&A.' },
   { title: 'Application scenarios', desc: 'Supports multiple segmentation scenarios, including verification, testing, and design document management.' },

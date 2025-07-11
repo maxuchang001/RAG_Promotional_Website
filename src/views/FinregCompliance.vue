@@ -221,7 +221,7 @@
             <div class="case-content">
               <h3 class="case-title">Anti-money laundering system upgrade</h3>
               <p class="case-desc">
-                After the deployment of this solution, the accuracy rate of suspicious transaction identification has been increased by 58%, the workload of manual review has been reduced by 70%, and the compliance rate of regulatory reporting has reached 100%, saving more than 15 million yuan in compliance costs every year.
+                After the deployment of this solution, the accuracy rate of suspicious transaction identification has been increased by 58%, the workload of manual review has been reduced by 70%, and the compliance rate of regulatory reporting has reached 100%, saving more than $2.15 million in compliance costs every year.
               </p>
               <div class="case-results">
                 <div class="result-item">
@@ -233,7 +233,7 @@
                   <div class="result-label">Fewer manual reviews</div>
                 </div>
                 <div class="result-item">
-                  <div class="result-value">1500万</div>
+                  <div class="result-value">$2.15 million</div>
                   <div class="result-label">annual cost savings</div>
                 </div>
               </div>
