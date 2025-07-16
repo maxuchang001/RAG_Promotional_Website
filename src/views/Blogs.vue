@@ -91,7 +91,7 @@ const posts = ref([
     category: 'Product',
     tags: ['Data Ingestion', 'Product'],
     readtime: 5,
-    href: '#',
+    href: '/blog/data-pipeline',
   },
   {
     id: 3,
@@ -102,19 +102,19 @@ const posts = ref([
     category: 'Engineering',
     tags: ['RAG', 'Evaluation'],
     readtime: 7,
-    href: '#',
+    href: '/blog/retrieval-generation',
   },
-  {
-    id: 4,
-    title: 'SOC 2 Type II & HIPAA: Security at Every Layer of Contextual AI',
-    excerpt: 'Our commitment to enterprise-grade security is now validated by independent auditors. Here’s what it means for customers.',
-    image: 'https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80',
-    date: 'April 2, 2025',
-    category: 'Company',
-    tags: ['Security', 'Compliance'],
-    readtime: 4,
-    href: '#',
-  }
+  // {
+  //   id: 4,
+  //   title: 'SOC 2 Type II & HIPAA: Security at Every Layer of Contextual AI',
+  //   excerpt: 'Our commitment to enterprise-grade security is now validated by independent auditors. Here’s what it means for customers.',
+  //   image: 'https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80',
+  //   date: 'April 2, 2025',
+  //   category: 'Company',
+  //   tags: ['Security', 'Compliance'],
+  //   readtime: 4,
+  //   href: '#',
+  // }
 ])
 
 const search = ref('')
