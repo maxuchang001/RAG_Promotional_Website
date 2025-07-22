@@ -39,7 +39,7 @@ import { ref } from 'vue'
 const activeTable = ref('1')
 
 const handleLogin = () => {
-  window.location.href = 'http://34.80.152.254:9001/'
+  window.location.href = 'https://agent.encryagent.com'
 }
 
 </script>
