@@ -15,8 +15,8 @@
       </el-col>
       <el-col :span="6">
         <h4>Contact Details</h4>
-        <p>Email：contact@example.com</p>
-        <p>Phone Call：400-123-4567</p>
+        <p>Email: spiritai@platformai.org</p>
+        <p>Phone Call: 310-745-6014</p>
       </el-col>
     </el-row>
   </el-footer>

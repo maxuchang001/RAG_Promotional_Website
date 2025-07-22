@@ -1,7 +1,7 @@
 <template>
   <el-header>
     <div class="logo" @click="handleMenuClick('/')">
-      <el-icon :size="20"><Monitor /></el-icon> RAG Platform
+      <el-icon :size="20"><Monitor /></el-icon> EncryAgent
     </div>
     <el-menu mode="horizontal" class="nav" :default-active="activeTable">
       <el-menu-item index="1" @click="handleMenuClick('/')">Home</el-menu-item>
@@ -20,7 +20,7 @@
     </el-menu>
     <div class="actions">
       <el-input placeholder="Search..." size="small" />
-      <el-button type="primary">Login/Register</el-button>
+      <el-button type="primary" @click="handleLogin">Login/Register</el-button>
     </div>
   </el-header>
 </template>
@@ -37,6 +37,10 @@ const handleMenuClick = (path) => {
 import { ref } from 'vue'
 
 const activeTable = ref('1')
+
+const handleLogin = () => {
+  window.location.href = 'http://34.80.152.254:9001/'
+}
 
 </script>
 

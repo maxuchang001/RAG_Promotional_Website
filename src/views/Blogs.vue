@@ -3,7 +3,7 @@
     <!-- Hero -->
     <section class="hero">
       <h1>Insights & Updates</h1>
-      <p class="lead">Thought leadership, product deep-dives, and best practices on building RAG-powered applications with Contextual AI.</p>
+      <p class="lead">Thought leadership, product deep-dives, and best practices on building RAG-powered applications with EncryAgent.</p>
     </section>
 
     <!-- Filters -->
@@ -106,7 +106,7 @@ const posts = ref([
   },
   // {
   //   id: 4,
-  //   title: 'SOC 2 Type II & HIPAA: Security at Every Layer of Contextual AI',
+  //   title: 'SOC 2 Type II & HIPAA: Security at Every Layer of EncryAgent',
   //   excerpt: 'Our commitment to enterprise-grade security is now validated by independent auditors. Here’s what it means for customers.',
   //   image: 'https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80',
   //   date: 'April 2, 2025',
