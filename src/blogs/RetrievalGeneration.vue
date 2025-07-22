@@ -111,11 +111,11 @@
 
       <h3>Example: Financial Document QA</h3>
       <section class="img-section">
-        <img
+        <!-- <img
           src="../assets/img/rag-eval-example.png"
           alt="RAG Evaluation Example"
           class="center-img"
-        />
+        /> -->
         <div class="img-caption">
           <strong>Case Study:</strong> A bank uses RAG to answer regulatory
           questions. Automated tests show 92% precision and 88% answer
