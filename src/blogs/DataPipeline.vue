@@ -17,11 +17,11 @@
 
     <!-- Architecture Diagram -->
     <section class="img-section">
-      <img
+      <!-- <img
         src="../assets/img/pipelines-architecture.png"
         alt="Datastore Pipelines Architecture"
         class="center-img"
-      />
+      /> -->
       <div class="img-caption">
         <strong>Architecture:</strong> Modular pipeline stages enable scalable,
         reliable, and auditable data ingestion for enterprise workloads.
@@ -93,11 +93,11 @@
 
       <h3>Real-World Example</h3>
       <section class="img-section">
-        <img
+        <!-- <img
           src="../assets/img/pipelines-example.png"
           alt="Enterprise Data Ingestion Example"
           class="center-img"
-        />
+        /> -->
         <div class="img-caption">
           <strong>Example:</strong> A financial institution ingests 2 million
           regulatory documents monthly, with automated PII redaction and audit
@@ -149,11 +149,11 @@
 
       <h2>Security & Compliance</h2>
       <section class="img-section">
-        <img
+        <!-- <img
           src="../assets/img/pipelines-security.png"
           alt="Security and Compliance"
           class="center-img"
-        />
+        /> -->
         <div class="img-caption">
           <strong>Security:</strong> Role-based access, encryption at rest, and
           full audit logs for every pipeline step.
