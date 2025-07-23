@@ -9,6 +9,8 @@ import ChipDesignCase from "../views/ChipDesignCase.vue";
 import AutonomousVehicles from "../views/AutonomousVehicles.vue";
 import MedicalRobotics from "../views/MedicalRobotics.vue";
 import FinregCompliance from "../views/FinregCompliance.vue";
+import SpiritMusic from '../views/SpiritMusic.vue';
+
 import Customize from '../blogs/Customize.vue';
 import BeginnerGuide from '../docs/BeginnerGuide.vue';
 import DataPipeline from '../blogs/DataPipeline.vue';
@@ -24,6 +26,8 @@ const routes = [
   { path: '/chipdesigncase', name: 'ChipDesignCase', component: ChipDesignCase },
   { path: '/autonomousvehicles', name: 'AutonomousVehicles', component: AutonomousVehicles },
   { path: '/medicalrobotics', name: 'MedicalRobotics', component: MedicalRobotics },
+  { path: '/finregcompliance', name: 'FinregCompliance', component: FinregCompliance },
+  { path: '/spiritmusic', name: 'SpiritMusic', component: SpiritMusic },
   { path: '/finregcompliance', name: 'FinregCompliance', component: FinregCompliance },
   { path: '/blog/customizing-dataset-agents', name: 'Customize', component: Customize },
   { path: '/blog/data-pipeline', name: 'DataPipeline', component: DataPipeline },
